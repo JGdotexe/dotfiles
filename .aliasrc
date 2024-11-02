@@ -37,4 +37,3 @@ alias icat='kitten icat'
 #-----Nix-----#
 
 #alias nix-env='nix'
-test
