@@ -56,8 +56,6 @@ eval "$(starship init bash)"
 
 ###Fetches###
 # nerdfetch
-#fastfetch -c ~/.git/fastfetch/presets/examples/13.jsonc
-
 
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 # export PATH="$PATH:$HOME/.rvm/bin"

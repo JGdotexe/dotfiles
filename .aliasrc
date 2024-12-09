@@ -37,6 +37,7 @@ alias icat='kitten icat'
 #-----Nix-----#
 
 #alias nix-env='nix'
+<<<<<<< HEAD
 
 #-----nvim-----#
 alias fv='nvim $(fzf --preview="bat --color=always {}")'
