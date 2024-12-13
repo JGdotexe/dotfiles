@@ -32,7 +32,8 @@ bindkey '5~' kill-word
 #-----Zsh-plugins-----#
 source /home/jg/git/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
-
+autoload -U compinit; compinit
+source ~/git/fzf-tab/fzf-tab.plugin.zsh
 
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 # export PATH="$PATH:$HOME/.rvm/bin"
@@ -40,3 +41,10 @@ export PATH=$PATH:"/home/jg/.local/bin"
 #-----VI-Mode-----#
 # bindkey -v
 bindkey '\e ' autosuggest-accept
+
+#Completion styling
+zstyle ':completion:*' menu no
+zstyle ':fzf-tab:complete:cd:*' fzf-preview 'ls --color $realpath'
+zstyle ':fzf-tab:complete:cd:*' fzf-preview 'eza -1 --color=always $realpath'
+zstyle ':completion::*:ls::*' fzf-completion-opts --preview='eval head {1}'
+zstyle ':fzf-tab:complete:__zoxide_z:*'fzf-preview 'ls --color $realpath'
