@@ -9,7 +9,7 @@ style = "Bold"
 # opacity = 0.8
 
 [window.padding]
-x = 0
+x = 4
 y = 0
 
 [selection]
