@@ -1,0 +1,4 @@
+font-family = "JetBrains Mono"
+font-style = Bold
+keybind = ctrl+a=new_split:right
+theme = Kanagawa Dragon
