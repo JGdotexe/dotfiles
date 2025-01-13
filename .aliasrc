@@ -4,20 +4,26 @@
 alias kernels='ls /boot | grep vmlinuz'
 
 #-----exa/ls-----#
-alias ll='eza -l -all --icons --sort=type --group-directories-first --group'
-alias ls='eza --icons --sort=type'
-alias tree='eza -al --tree --icons -L 3'
+if  [[ eza -q ]]
+    alias ll='eza -l -all --icons --sort=type --group-directories-first --group'
+    alias ls='eza --icons --sort=type'
+    alias tree='eza -al --tree --icons -L 3'
+fi
+
 alias cat='bat'
 alias ex='exit'
 
 #-----dnf-----#
-alias dnf='dnf5'
-alias sysupdate='sudo dnf5 update'
-alias i='sudo dnf5 install'
-alias s='sudo dnf5 search'
-alias rmp='sudo dnf5 remove'
+# alias dnf='dnf5'
+alias sysupdate='sudo dnf update'
+alias i='sudo dnf install'
+alias s='sudo dnf search'
+alias rmp='sudo dnf remove'
 
+#-----nvim-----#
 alias vim='nvim'
+alias v='nvim'
+
 alias cp='cp -i'
 alias mv='mv -i'
 
@@ -25,10 +31,10 @@ alias mv='mv -i'
 alias ..='cd ..'
 
 #-----Distrobox-----#
-alias dtb-enter='distrobox enter --root'
+# alias dtb-enter='distrobox enter --root'
 
 #-----Docker-----#
-alias runewbui='sudo docker run -d --network=host -v open-webui:/app/backend/data -e OLLAMA_BASE_URL=http://127.0.0.1:11434 --restart always ghcr.io/open-webui/open-webui:main'
+# alias runewbui='sudo docker run -d --network=host -v open-webui:/app/backend/data -e OLLAMA_BASE_URL=http://127.0.0.1:11434 --restart always ghcr.io/open-webui/open-webui:main'
 
 #-----Kittens-----#
 
@@ -37,11 +43,13 @@ alias icat='kitten icat'
 #-----Nix-----#
 
 #alias nix-env='nix'
-<<<<<<< HEAD
 
 #-----nvim-----#
 alias fv='nvim $(fzf --preview="bat --color=always {}")'
 
 #-----Zoxide-----#
-alias cd='z'
+# alias cd='z'
 alias cdd='cd ~ && cd $(find . -type d -print | fzf)'
+
+#-----Zathura-----#
+alias za='zathura'
