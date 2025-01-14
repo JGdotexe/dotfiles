@@ -4,11 +4,9 @@
 alias kernels='ls /boot | grep vmlinuz'
 
 #-----exa/ls-----#
-if  [[ eza -q ]]
-    alias ll='eza -l -all --icons --sort=type --group-directories-first --group'
-    alias ls='eza --icons --sort=type'
-    alias tree='eza -al --tree --icons -L 3'
-fi
+alias ll='eza -l -all --icons --sort=type --group-directories-first --group'
+alias ls='eza --icons --sort=type'
+alias tree='eza -al --tree --icons -L 3'
 
 alias cat='bat'
 alias ex='exit'
