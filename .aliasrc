@@ -6,7 +6,7 @@ alias kernels='ls /boot | grep vmlinuz'
 #-----exa/ls-----#
 alias ll='eza -l -all --icons --sort=type --group-directories-first --group'
 alias ls='eza --icons --sort=type'
-alias tree='eza -al --tree --icons -L 3'
+alias tree='eza -al --tree --icons -L3'
 
 alias cat='bat'
 alias ex='exit'
@@ -32,7 +32,7 @@ alias ..='cd ..'
 # alias dtb-enter='distrobox enter --root'
 
 #-----Docker-----#
-# alias runewbui='sudo docker run -d --network=host -v open-webui:/app/backend/data -e OLLAMA_BASE_URL=http://127.0.0.1:11434 --restart always ghcr.io/open-webui/open-webui:main'
+alias runwebui='sudo docker run -d --network=host -v open-webui:/app/backend/data -e OLLAMA_BASE_URL=http://127.0.0.1:11434 --restart always ghcr.io/open-webui/open-webui:main'
 
 #-----Kittens-----#
 
@@ -51,3 +51,6 @@ alias cdd='cd ~ && cd $(find . -type d -print | fzf)'
 
 #-----Zathura-----#
 alias za='zathura'
+
+#-----Yazi-----#
+alias y='yazi'

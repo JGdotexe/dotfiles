@@ -2,7 +2,7 @@
 font-family = "JetBrains Mono"
 font-style = Bold
 
-theme = Kanagawa Dragon
+theme = mellow
 
 keybind = ctrl+shift+l=new_split:right
 keybind = ctrl+shift+h=new_split:left
