@@ -15,9 +15,11 @@ eval "$(starship init zsh)"
 eval "$(zoxide init zsh)"
 
 #aliasrc
-if [ -f ~/.aliasrc ]; then
-    . ~/.aliasrc
-fi
+# if [ -f ~/.aliasrc ]; then
+#     source ~/.aliasrc
+# fi
+
+source ~/.dotfiles/.aliasrc
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 source <(fzf --zsh)
@@ -39,8 +41,8 @@ source ~/git/fzf-tab/fzf-tab.plugin.zsh
 # export PATH="$PATH:$HOME/.rvm/bin"
 export PATH=$PATH:"/home/jg/.local/bin"
 #-----VI-Mode-----#
-# bindkey -v
-bindkey '\e ' autosuggest-accept
+# # bindkey -v
+# bindkey '\e ' autosuggest-accept
 
 #Completion styling
 zstyle ':completion:*' menu no
@@ -48,3 +50,9 @@ zstyle ':fzf-tab:complete:cd:*' fzf-preview 'ls --color $realpath'
 zstyle ':fzf-tab:complete:cd:*' fzf-preview 'eza -1 --color=always $realpath'
 zstyle ':completion::*:ls::*' fzf-completion-opts --preview='eval head {1}'
 zstyle ':fzf-tab:complete:__zoxide_z:*'fzf-preview 'ls --color $realpath'
+source /home/jg/git/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+#---GEMINI API KEY---#
+export GEMINI_API_KEY="AIzaSyCydXcJ0zVd0kqwoPZnOixY9fkFwvp8bHc"
+#---Editor---#
+export EDITOR="/usr/bin/nvim"
